@@ -4,12 +4,14 @@
 
 <%= link_to 'Nueva Serie', series_new_path %>
 
-<table>
-  <tr>
-    <th>Nombre</th>
-    <th>Sinopsis</th>
-    <th>Director</th>
-  </tr>
+<table class="table table-hover">
+  <thead class="table-dark"> 
+    <tr>
+      <th scope="col">Nombre</th>
+      <th scope="col">Sinopsis</th>
+      <th scope="col">Director</th>
+    </tr>
+  </thead>
   <% @series.each do |serie| %>
     <tr>
       <td><%= serie.name %></td>
