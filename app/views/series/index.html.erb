@@ -2,7 +2,7 @@
 
 <p>Listado de Series</p>
 
-<%= link_to 'Nueva Serie', series_new_path %>
+<%= link_to 'Nueva Serie', new_serie_path %>
 
 <table class="table table-hover">
   <thead class="table-dark"> 
@@ -10,6 +10,7 @@
       <th scope="col">Nombre</th>
       <th scope="col">Sinopsis</th>
       <th scope="col">Director</th>
+      <th scope="col">Acciones</th>
     </tr>
   </thead>
   <% @series.each do |serie| %>
@@ -17,6 +18,8 @@
       <td><%= serie.name %></td>
       <td><%= serie.synopsis %></td>
       <td><%= serie.director %></td>
+      <td>
+        <%= link_to 'Ver', serie_path(serie) %>
     </tr>
   <% end %>
 </table>
