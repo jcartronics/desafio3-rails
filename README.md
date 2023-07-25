@@ -1,24 +1,34 @@
-# README
+# RoR - Desafio3
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Tercer proyecto del curso Emprendedor Digital - Inforcap.
 
-Things you may want to cover:
+## Instalación
 
-* Ruby version
+- Clonar el proyecto
+- Ejecutar:
 
-* System dependencies
+```bash
+bundle install
+```
 
-* Configuration
+## Uso
 
-* Database creation
+```bash
+rails s
+```
 
-* Database initialization
+## Contribuir
 
-* How to run the test suite
+Se aceptan pull requests. Para cambios mayores, por favor abra un issue primero
+para revisar lo que le gustaría cambiar.
 
-* Services (job queues, cache servers, search engines, etc.)
+Asegúrese de realizar las pruebas oportunas.
 
-* Deployment instructions
+## Licencia
 
-* ...
+[MIT](https://choosealicense.com/licenses/mit/)
+
+## Heroku
+
+Link al proyecto en Heroku:
+[https://secret-lake-94149-6e18ec94c5df.herokuapp.com/](https://secret-lake-94149-6e18ec94c5df.herokuapp.com/)
