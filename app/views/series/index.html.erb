@@ -1,2 +1,21 @@
-<h1>Series#index</h1>
-<p>Find me in app/views/series/index.html.erb</p>
+<h1>Series</h1>
+
+<p>Listado de Series</p>
+
+<%= link_to 'Nueva Serie', new_serie_path %>
+
+<table>
+  <tr>
+    <th>Nombre</th>
+    <th>Sinopsis</th>
+    <th>Director</th>
+  </tr>
+  <% @series.each do |serie| %>
+    <tr>
+      <td><%= serie.name %></td>
+      <td><%= serie.synopsis %></td>
+      <td><%= serie.director %></td>
+      <td><%= link_to 'Mostrar', serie %></td>
+    </tr>
+  <% end %>
+</table>
