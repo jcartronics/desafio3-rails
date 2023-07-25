@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'home/index'
 
   get "/series", to: "series#index", as: 'series'
   get "/series/new", to: "series#new", as: 'new_serie'
@@ -15,5 +16,5 @@ Rails.application.routes.draw do
   post "documentary_films", to: "documentary_films#create"
   get "/documentary_films/:id", to: "documentary_films#show", as: "documentary_film"
 
+  root "home#index"
 end
-  # root "articles#index"
