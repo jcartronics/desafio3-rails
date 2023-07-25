@@ -1,29 +1,35 @@
 class MoviesController < ApplicationController
-  # lista todas las peliculas
+  # lista todas las movies
   def index
     @movies = Movie.all
   end
 
-  # crea una nueva pelicula
-  def create
-    @movies = Movie.new(movies_params)
-
-    if @movies.save
-      redirect_to @movies
-    else
-      render "new"
-    end
+  # muestra una movie
+  def show
+    @movie = Movie.find(params[:id])
   end
 
-  # instancia una nueva pelicula
+  # instancia una nueva movie
   def new
-    @movies = Movie.new
+    @movie = Movie.new
+  end
+
+  # crea una nueva movie
+  def create
+    @movie = Movie.new(movie_params)
+
+    if @movie.save
+      redirect_to movies_path
+    else
+      render "new", status: :unprocessable_entity
+    end
   end
 
   private
 
   # metodo para definir los parametros que se van a permitir
-  def movies_params
-    params.require(:movies).permit(:name, :synopsis, :director)
+  def movie_params
+    params.require(:movie).permit(:name, :synopsis, :director)
   end
 end
+
