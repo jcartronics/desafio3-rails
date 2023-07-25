@@ -1,12 +1,12 @@
 class SeriesController < ApplicationController
   # lista todas las series
   def index
-    @series = Series.all
+    @series = Serie.all
   end
 
   # crea una nueva serie
   def create
-    @series = Series.new(series_params)
+    @series = Serie.new(series_params)
 
     if @series.save
       redirect_to @series
@@ -17,7 +17,7 @@ class SeriesController < ApplicationController
 
   # instancia una nueva serie
   def new
-    @series = Series.new
+    @series = Serie.new
   end
 
   private
