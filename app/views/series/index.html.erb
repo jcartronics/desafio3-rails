@@ -2,7 +2,7 @@
 
 <p>Listado de Series</p>
 
-<%= link_to 'Nueva Serie', new_serie_path %>
+<%= link_to 'Nueva Serie', series_new_path %>
 
 <table>
   <tr>
@@ -15,7 +15,6 @@
       <td><%= serie.name %></td>
       <td><%= serie.synopsis %></td>
       <td><%= serie.director %></td>
-      <td><%= link_to 'Mostrar', serie %></td>
     </tr>
   <% end %>
 </table>
