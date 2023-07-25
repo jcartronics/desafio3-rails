@@ -1,12 +1,12 @@
 class MoviesController < ApplicationController
   # lista todas las peliculas
   def index
-    @movies = Movies.all
+    @movies = Movie.all
   end
 
   # crea una nueva pelicula
   def create
-    @movies = Movies.new(movies_params)
+    @movies = Movie.new(movies_params)
 
     if @movies.save
       redirect_to @movies
@@ -17,7 +17,7 @@ class MoviesController < ApplicationController
 
   # instancia una nueva pelicula
   def new
-    @movies = Movies.new
+    @movies = Movie.new
   end
 
   private
