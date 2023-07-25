@@ -2,7 +2,7 @@
 
 <p>Listado de Documentales</p>
 
-<%= link_to 'Nuevo documental', new_documentary_film_path %>
+<%= link_to 'Nuevo documental', new_documentary_film_path, class: "btn btn-warning my-1" %>
 
 <table class="table table-hover">
   <thead class="table-dark"> 
@@ -19,7 +19,7 @@
       <td><%= documentary_film.synopsis %></td>
       <td><%= documentary_film.director %></td>
       <td>
-        <%= link_to 'Ver', documentary_film_path(documentary_film) %>
+        <%= link_to 'Ver', documentary_film_path(documentary_film), class: "btn btn-primary" %>
     </tr>
   <% end %>
 </table>

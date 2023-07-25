@@ -2,7 +2,7 @@
 
 <p>Listado de Peliculas</p>
 
-<%= link_to 'Nueva Pelicula', new_movie_path %>
+<%= link_to 'Nueva Pelicula', new_movie_path, class: "btn btn-warning my-1" %>
 
 <table class="table table-hover">
   <thead class="table-dark"> 
@@ -19,7 +19,7 @@
       <td><%= movie.synopsis %></td>
       <td><%= movie.director %></td>
       <td>
-        <%= link_to 'Ver', movie_path(movie) %>
+        <%= link_to 'Ver', movie_path(movie), class: "btn btn-primary" %>
     </tr>
   <% end %>
 </table>

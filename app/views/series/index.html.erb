@@ -2,7 +2,7 @@
 
 <p>Listado de Series</p>
 
-<%= link_to 'Nueva Serie', new_serie_path %>
+<%= link_to 'Nueva Serie', new_serie_path, class: "btn btn-warning my-1" %>
 
 <table class="table table-hover">
   <thead class="table-dark"> 
@@ -19,7 +19,7 @@
       <td><%= serie.synopsis %></td>
       <td><%= serie.director %></td>
       <td>
-        <%= link_to 'Ver', serie_path(serie) %>
+        <%= link_to 'Ver', serie_path(serie), class: "btn btn-primary" %>
     </tr>
   <% end %>
 </table>
