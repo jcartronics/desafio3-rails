@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  get 'series/index'
+  get 'series/create'
+  get 'series/new'
   get 'movies/index'
   get 'movies/create'
   get 'movies/new'
