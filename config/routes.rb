@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  get 'documentary_films/index'
+  get 'documentary_films/create'
+  get 'documentary_films/new'
   get 'series/index'
   get 'series/create'
   get 'series/new'
