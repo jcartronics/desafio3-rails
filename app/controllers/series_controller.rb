@@ -4,26 +4,26 @@ class SeriesController < ApplicationController
     @series = Serie.all
   end
 
+  # instancia una nueva serie
+  def new
+    @serie = Serie.new
+  end
+
   # crea una nueva serie
   def create
-    @series = Serie.new(series_params)
+    @serie = Serie.new(series_params)
 
-    if @series.save
-      redirect_to @series
+    if @serie.save
+      redirect_to @serie
     else
       render "new"
     end
-  end
-
-  # instancia una nueva serie
-  def new
-    @series = Serie.new
   end
 
   private
 
   # metodo para definir los parametros que se van a permitir
   def series_params
-    params.require(:series).permit(:name, :synopsis, :director)
+    params.require(:serie).permit(:name, :synopsis, :director)
   end
 end
